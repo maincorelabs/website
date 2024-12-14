@@ -1,0 +1,63 @@
+<svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background grid pattern -->
+    <defs>
+        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#cc000022" stroke-width="1"/>
+        </pattern>
+    </defs>
+    <rect width="600" height="400" fill="url(#grid)"/>
+    
+    <!-- Main systems -->
+    <g transform="translate(300, 200)" stroke="#cc0000" fill="none">
+        <!-- Central System -->
+        <g class="central-system">
+            <rect x="-40" y="-40" width="80" height="80" rx="10"/>
+            <circle cx="0" cy="0" r="20"/>
+            <path d="M -20 -20 L 20 20 M -20 20 L 20 -20"/>
+        </g>
+        
+        <!-- Satellite Systems -->
+        <g class="system-1" transform="translate(-150, -100)">
+            <rect x="-30" y="-30" width="60" height="60" rx="8"/>
+            <circle cx="0" cy="0" r="15"/>
+        </g>
+        
+        <g class="system-2" transform="translate(150, -80)">
+            <rect x="-25" y="-25" width="50" height="50" rx="8"/>
+            <circle cx="0" cy="0" r="12"/>
+        </g>
+        
+        <g class="system-3" transform="translate(120, 100)">
+            <rect x="-35" y="-35" width="70" height="70" rx="8"/>
+            <circle cx="0" cy="0" r="18"/>
+        </g>
+        
+        <g class="system-4" transform="translate(-130, 80)">
+            <rect x="-28" y="-28" width="56" height="56" rx="8"/>
+            <circle cx="0" cy="0" r="14"/>
+        </g>
+        
+        <!-- Connecting Lines -->
+        <path d="M -120 -100 Q 0 -150 150 -80" stroke-width="2"/>
+        <path d="M 150 -80 Q 200 0 120 100" stroke-width="2" stroke-dasharray="5,5"/>
+        <path d="M 120 100 Q 0 150 -130 80" stroke-width="2"/>
+        <path d="M -130 80 Q -180 0 -120 -100" stroke-width="2" stroke-dasharray="5,5"/>
+        
+        <!-- Data Flow Indicators -->
+        <circle cx="-60" cy="-125" r="4" fill="#cc0000">
+            <animate attributeName="opacity" values="0.2;1;0.2" dur="2s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="175" cy="0" r="4" fill="#cc0000">
+            <animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="-50" cy="125" r="4" fill="#cc0000">
+            <animate attributeName="opacity" values="0.2;1;0.2" dur="2.5s" repeatCount="indefinite"/>
+        </circle>
+        
+        <!-- Connection Points -->
+        <circle cx="-120" cy="-100" r="3" fill="#cc0000"/>
+        <circle cx="150" cy="-80" r="3" fill="#cc0000"/>
+        <circle cx="120" cy="100" r="3" fill="#cc0000"/>
+        <circle cx="-130" cy="80" r="3" fill="#cc0000"/>
+    </g>
+</svg>

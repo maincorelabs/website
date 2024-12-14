@@ -1,0 +1,48 @@
+---
+layout: default
+---
+<article class="post">
+    <header class="post-header">
+        <div class="post-cover">
+            {% if page.cover_image %}
+            <img src="{{ page.cover_image | relative_url }}" alt="{{ page.title }}" class="cover-image">
+            {% else %}
+            <img src="{{ '/assets/images/default-post-cover.svg' | relative_url }}" alt="{{ page.title }}" class="cover-image">
+            {% endif %}
+        </div>
+        <div class="post-header-content">
+            <h1>{{ page.title }}</h1>
+            <div class="post-meta">
+                <time datetime="{{ page.date | date_to_xmlschema }}">
+                    {{ page.date | date: "%B %d, %Y" }}
+                </time>
+                {% if page.author %}
+                <span class="post-author">
+                    Written by {{ page.author }}
+                </span>
+                {% endif %}
+            </div>
+        </div>
+    </header>
+
+    <div class="post-content">
+        {{ content }}
+    </div>
+
+    <div class="post-share">
+        <div class="share-buttons">
+            <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ site.url }}{{ site.baseurl }}{{ page.url }}" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="share-button twitter">
+                Share on Twitter
+            </a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ site.baseurl }}{{ page.url }}&title={{ page.title | url_encode }}" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="share-button linkedin">
+                Share on LinkedIn
+            </a>
+        </div>
+    </div>
+</article>

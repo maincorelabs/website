@@ -1,0 +1,54 @@
+---
+layout: default
+title: Careers
+---
+
+<div class="careers-header">
+    <h1>Open Positions</h1>
+    <p class="careers-intro">Join our team and help build the future of web development with Ruby on Rails</p>
+</div>
+
+<div class="post-grid job-grid">
+    {% for job in site.jobs %}
+    <article class="post-card job-card">
+        <div class="post-content job-content">
+            <div class="job-meta">
+                <span class="job-type">{{ job.job_type }}</span>
+                <span class="job-location">{{ job.location }}</span>
+            </div>
+            <h2><a href="{{ job.url }}">{{ job.title }}</a></h2>
+            <div class="job-highlights">
+                <ul>
+                    <li>Competitive salary and benefits</li>
+                    <li>Remote-friendly environment</li>
+                    <li>Professional growth opportunities</li>
+                    <li>Modern tech stack</li>
+                </ul>
+            </div>
+            <a href="{{ job.url }}" class="read-more">View Position →</a>
+        </div>
+    </article>
+    {% endfor %}
+</div>
+
+<div class="careers-cta">
+    <h2>Why Join Maincore?</h2>
+    <div class="benefits-grid">
+        <div class="benefit-item">
+            <h3>Modern Tech Stack</h3>
+            <p>Work with the latest technologies and best practices in web development.</p>
+        </div>
+        <div class="benefit-item">
+            <h3>Remote-First</h3>
+            <p>Enjoy the flexibility of working from anywhere in the world.</p>
+        </div>
+        <div class="benefit-item">
+            <h3>Growth Focus</h3>
+            <p>Continuous learning and professional development opportunities.</p>
+        </div>
+        <div class="benefit-item">
+            <h3>Great Culture</h3>
+            <p>Join a collaborative team that values work-life balance.</p>
+        </div>
+    </div>
+</div>

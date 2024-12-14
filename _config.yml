@@ -1,0 +1,53 @@
+title: Maincore
+email: contact@maincore.ro
+description: Expert Ruby on Rails Development Solutions
+baseurl: "" # For local development
+# For GitHub Pages deployment, use:
+# baseurl: "/maincore-website"
+url: "https://maincorelabs.github.io"
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Social media and SEO settings
+social:
+  name: Maincore
+  links:
+    - https://github.com/maincorelabs
+    - https://www.linkedin.com/company/main-core
+
+# Collections
+collections:
+  jobs:
+    output: true
+    permalink: /careers/:path/
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:title/
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: "_jobs"
+      type: "jobs"
+    values:
+      layout: "job"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor

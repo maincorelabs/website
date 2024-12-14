@@ -1,0 +1,20 @@
+<header class="site-header">
+    <div class="container">
+        <div class="logo">
+            <a href="{{ '/' | relative_url }}">
+                <img src="{{ '/Logo.png' | relative_url }}" alt="Maincore" class="logo-light">
+                <img src="{{ '/Logo - Dark.png' | relative_url }}" alt="Maincore" class="logo-dark">
+            </a>
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="{{ '/' | relative_url }}" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
+                <li><a href="{{ '/careers' | relative_url }}" {% if page.url contains "/careers" %}class="active"{% endif %}>Careers</a></li>
+                <li><a href="{{ '/blog' | relative_url }}" {% if page.url contains "/blog" %}class="active"{% endif %}>Blog</a></li>
+            </ul>
+        </nav>
+
+        {% include theme-switch.html %}
+    </div>
+</header>
