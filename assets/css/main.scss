@@ -34,7 +34,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0.5rem 1rem;
+    padding: 0 1rem;
 }
 
 // Header styles
@@ -390,6 +390,7 @@ body {
     margin-bottom: 3rem;
     border-radius: 8px;
     overflow: hidden;
+    margin-top: 2rem;
 
     .hero-content {
         display: flex;
