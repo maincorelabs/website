@@ -4,7 +4,7 @@ description: Expert Ruby on Rails Development Solutions
 baseurl: "" # For local development
 # For GitHub Pages deployment, use:
 # baseurl: "/maincore-website"
-url: "https://maincorelabs.github.io"
+url: "https://maincore.ro"
 
 # Build settings
 markdown: kramdown
